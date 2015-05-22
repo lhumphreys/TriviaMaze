@@ -1,0 +1,425 @@
+Opened database successfully!
+
+----------------QUESTIONS------------------
+Num   Question                                                                                                                                                                                                 Type                
+1     In the anime "Free!", what do the four main characters of the Iwatobi Swim Club have in common?                                                                                                          MultipleChoice      
+2     In the anime "Ouran High School Host Club", what are the names of the red-haired twins that are both hosts in the club?                                                                                  MultipleChoice      
+3     In the anime "Death Note", what is Light Yagami known as once mass amounts of criminals begin dying mysteriously as a result of him using the Death Note?                                                MultipleChoice      
+4     In the anime "Attack on Titan", what are Eren Yeager and the rest of the Survey Corp taught to do in order to kill a titan?                                                                              MultipleChoice      
+5     In the anime "Parasyte: The Maxim", why does the main character Shinichi Izumi not get completely taken over by the alien parasite trying to attack him?                                                 MultipleChoice      
+6     In the sitcom "Seinfeld", what was George Costanza known for doing when a kitchen caught fire at a child's birthday party?                                                                               MultipleChoice      
+7     In the sitcom "Big Bang Theory", how was the elevator originally broken?                                                                                                                                 MultipleChoice      
+8     In the sitcom "Everybody Loves Raymond", what is peculiar about Robert Barone's eating habits?                                                                                                           MultipleChoice      
+9     In the sitcom "How I Met Your Mother", Barney Stinson is known for what?                                                                                                                                 MultipleChoice      
+10    In the sitcom "Fresh Prince of Bel-Air", where was Will Smith's character originally from before he moved to Bel-Air?                                                                                    MultipleChoice      
+11    In the sci-fi show "Supernatural", what killed Sam and Dean's mother?                                                                                                                                    MultipleChoice      
+12    In the sci-fi show "Being Human", why does Sally ignore her door, forfeiting her chance to move on to the afterlife?                                                                                     MultipleChoice      
+13    In the sci-fi show "Marvel's Agents of S.H.I.E.L.D", what is the name of the terrorist organization that resurfaces, despite it being believed to have been wiped out by Captain America in 1945?        MultipleChoice      
+14    In the sci-fi show "Doctor Who", who is the actor that plays the Tenth Doctor?                                                                                                                           MultipleChoice      
+15    In the sci-fi show "Land of the Lost", what causes the father Rick and his two children, Will and Holly, to become trapped in the unknown world?                                                         MultipleChoice      
+16    Which popular 1990s TV series that ran from 1994-2004 featured characters named Rachel, Monica, Phoebe, Joey, Chandler, and Ross?                                                                        MultipleChoice      
+17    Which cartoon television show based on the Griffin family became popular in the early 2000s?                                                                                                             MultipleChoice      
+18    What were the names of the two government agents played by David Duchovny and Gillian Anderson in the 1993-2002 series X-Files?                                                                          MultipleChoice      
+19    Which popular science fiction franchise aired its first episode in 1966?                                                                                                                                 MultipleChoice      
+20    Who won season 1 of American Idol?                                                                                                                                                                       MultipleChoice      
+21    What is the area of focus in CSI?                                                                                                                                                                        MultipleChoice      
+22    Who was the director of Jackass The Movie?                                                                                                                                                               MultipleChoice      
+23    What show are these three characters from: DJ, Michelle and Joey?                                                                                                                                        MultipleChoice      
+24    In the fantasy show "Game of Thrones", how many dragons does Daenerys own?                                                                                                                               MultipleChoice      
+25    In the fantasy show "Game of Thrones", what are Daenerys' dragons named?                                                                                                                                 MultipleChoice      
+26    In the fantasy show "Game of Thrones", which character killed Joffrey?                                                                                                                                   MultipleChoice      
+27    What does NCIS stand for?                                                                                                                                                                                MultipleChoice      
+28    In the drama show "Lost", how many rafts did the survivors make during season 1?                                                                                                                         MultipleChoice      
+29    In the drama show "Law & Order", who is the captain of the Special Victims Unit?                                                                                                                         MultipleChoice      
+30    In the horror show "The Walking Dead", who is the first to die without being bitten?                                                                                                                     MultipleChoice      
+31    In the horror show "The Walking Dead", who thought Carol was a lesbian?                                                                                                                                  MultipleChoice      
+32    In the fantasy show "Once Upon a Time", what was Snow White's mother's name?                                                                                                                             MultipleChoice      
+33    In the fantasy show "Once Upon a Time", what was a symbol of Rumple and Belle's love?                                                                                                                    MultipleChoice      
+
+----------------ANSWERS------------------
+QNum  ANum  Correct  Answer                                                                                                                                                
+1     1     0        A. They are all geniuses                                                                                                                              
+1     2     1        B. They all have feminine names                                                                                                                       
+1     3     0        C. They were all born within the same month                                                                                                           
+1     4     0        D. They all have the same hair color                                                                                                                  
+2     5     1        A. Kaoru and Hikaru                                                                                                                                   
+2     6     0        B. Haruhi and Mitsukuni                                                                                                                               
+2     7     0        C. Kyoya and Renge                                                                                                                                    
+2     8     0        D. Tamaki and Takashi                                                                                                                                 
+3     9     0        A. God                                                                                                                                                
+3     10    0        B. Ryuk                                                                                                                                               
+3     11    1        C. Kira                                                                                                                                               
+3     12    0        D. Shinigami                                                                                                                                          
+4     13    0        A. Hit the weak spot on the titan's stomach                                                                                                           
+4     14    1        B. Slice the weak spot on the back of the titan's neck                                                                                                
+4     15    0        C. Stab the titan directly between the eyes                                                                                                           
+4     16    0        D. Get eaten by the titan                                                                                                                             
+5     17    0        A. Shinichi wakes up and fights off the alien                                                                                                         
+5     18    0        B. The alien is wounded and therefore not strong enough                                                                                               
+5     19    0        C. Shinichi is immune to the alien's effects                                                                                                          
+5     20    1        D. Shinichi was wearing headphones when attacked                                                                                                      
+6     21    0        A. Making sure the children got out safely                                                                                                            
+6     22    0        B. Putting out the fire with an expensive scarf                                                                                                       
+6     23    0        C. Pouring alcohol on the fire and accidentally making it worse                                                                                       
+6     24    1        D. Yelling and pushing the children out of the way to save himself                                                                                    
+7     25    1        A. An explosive container of rocket fuel                                                                                                              
+7     26    0        B. Sheldon causing the power to go out                                                                                                                
+7     27    0        C. Leonard hitting the button too hard                                                                                                                
+7     28    0        D. It is still unknown why the elevator is out of order                                                                                               
+8     29    0        A. He only eats Tacos on Tuesdays                                                                                                                     
+8     30    0        B. He prays to his dead dog before every meal                                                                                                         
+8     31    1        C. He touches the food to his chin before every bite                                                                                                  
+8     32    0        D. He is the only vegetarian in the family                                                                                                            
+9     33    0        A. Being extremely tall                                                                                                                               
+9     34    1        B. Being a womanizer                                                                                                                                  
+9     35    0        C. Being excessively polite                                                                                                                           
+9     36    0        D. Having the largest hands                                                                                                                           
+10    37    0        A. East Philippines                                                                                                                                   
+10    38    0        B. North Philipsburg                                                                                                                                  
+10    39    1        C. West Philadelphia                                                                                                                                  
+10    40    0        D. South Philmont                                                                                                                                     
+11    41    0        A. A red-tailed Gryphon                                                                                                                               
+11    42    0        B. A blue-skinned Wendigo                                                                                                                             
+11    43    1        C. A yellow-eyed Demon                                                                                                                                
+11    44    0        D. A blonde-haired Leviathan                                                                                                                          
+12    45    0        A. Sally does not know how to open doors as a ghost and could not touch it                                                                            
+12    46    1        B. Aiden was stabbed by a wooden stake and in critical condition, causing her to stay and make sure he survived                                       
+12    47    0        C. Josh began to transform at the full moon, and she possessed him in order to save innocent bystanders                                               
+12    48    0        D. Another ghost went through the door thinking it was theirs, and stole her moment to pass on                                                        
+13    49    0        A. Schutzstaffel                                                                                                                                      
+13    50    0        B. Isis                                                                                                                                               
+13    51    1        C. Hydra                                                                                                                                              
+13    52    0        D. Deathlok                                                                                                                                           
+14    53    0        A. Christopher Eccleston                                                                                                                              
+14    54    1        B. David Tennant                                                                                                                                      
+14    55    0        C. Sylvester McCoy                                                                                                                                    
+14    56    0        D. Matt Smith                                                                                                                                         
+15    57    0        A. The sky opens up on a camping trip and sucks their tent into an alternate timeline                                                                 
+15    58    0        B. A scientist places a portal in their house, using the family as an experiment to test inter-dimensional travel                                     
+15    59    0        C. Rick was experimenting with the theory of time travel and accidentally brought them into a place where all timelines of the world mix together     
+15    60    1        D. The family was rafting when an earthquake caused the ground to open up, landing them in the unfamiliar world                                       
+16    61    1        A. Friends                                                                                                                                            
+16    62    0        B. Enemies                                                                                                                                            
+16    63    0        C. Acquaintances                                                                                                                                      
+16    64    0        D. Everybody Still Talks About It, Let's Just Get Over It Please                                                                                      
+17    65    1        A. Family Guy                                                                                                                                         
+17    66    0        B. Family Man                                                                                                                                         
+17    67    0        C. Family Guys                                                                                                                                        
+17    68    0        D. My Beloved Family                                                                                                                                  
+18    69    0        A. Fox Murderer and Dana Scully                                                                                                                       
+18    70    0        B. Fox Mulder and Dana Skull                                                                                                                          
+18    71    0        C. Fox Muld and Diana Scully                                                                                                                          
+18    72    1        D. Fox Mulder and Dana Scully                                                                                                                         
+19    73    0        A. Start Trek                                                                                                                                         
+19    74    0        B. Star Wars                                                                                                                                          
+19    75    0        C. Dr. What                                                                                                                                           
+19    76    1        D. Lost in Space                                                                                                                                      
+20    77    1        A. Kelly Clarkson                                                                                                                                     
+20    78    0        B. Kelly Morrison                                                                                                                                     
+20    79    0        C. Kelly Kee                                                                                                                                          
+20    80    0        D. Kelly Taylor                                                                                                                                       
+21    81    1        A. Crime                                                                                                                                              
+21    82    0        B. Chemistry                                                                                                                                          
+21    83    0        C. Medicine                                                                                                                                           
+21    84    0        D. Natural Disasters                                                                                                                                  
+22    85    1        A. Jeff Tremaine                                                                                                                                      
+22    86    0        B. Joffrey Tremannie                                                                                                                                  
+22    87    0        C. George Tremanner                                                                                                                                   
+22    88    0        D. Ithastobea Forest                                                                                                                                  
+23    89    1        A. Full House                                                                                                                                         
+23    90    0        B. Empty House                                                                                                                                        
+23    91    0        C. Full Cabinet                                                                                                                                       
+23    92    0        D. Little House on The Praire                                                                                                                         
+24    93    1        A. Three                                                                                                                                              
+24    94    0        B. Four                                                                                                                                               
+24    95    0        C. Five                                                                                                                                               
+24    96    0        D. Over Nine Thousand                                                                                                                                 
+25    97    1        A. Drogon, Viserion, and Rhaegal                                                                                                                      
+25    98    0        B. Drogon, Viesh, and Rhaeg                                                                                                                           
+25    99    0        C. Drogon, Visrion, and Rhomnir                                                                                                                       
+25    100   0        D. Drogal, Viesrion, and Rhaegal                                                                                                                      
+26    101   0        A. Olema                                                                                                                                              
+26    102   0        B. Olaf                                                                                                                                               
+26    103   0        C. Omar                                                                                                                                               
+26    104   1        D. Olenna                                                                                                                                             
+27    105   0        A. Nationalistic Criminal Investigative Service                                                                                                       
+27    106   0        B. National Criminal Inquiry Service                                                                                                                  
+27    107   1        C. Naval Criminal Investigative Service                                                                                                               
+27    108   0        D. National Criminal Investigatigation of Supects                                                                                                     
+28    109   1        A. Two                                                                                                                                                
+28    110   0        B. One                                                                                                                                                
+28    111   0        C. Three                                                                                                                                              
+28    112   0        D. Six                                                                                                                                                
+29    113   0        A. Captain Noris                                                                                                                                      
+29    114   0        B. Captain Cragen                                                                                                                                     
+29    115   0        C. Captain Craig                                                                                                                                      
+29    116   0        D. Captain Cracken                                                                                                                                    
+30    117   1        A. Jacqui                                                                                                                                             
+30    118   0        B. Mohamed                                                                                                                                            
+30    119   0        C. Lori                                                                                                                                               
+30    120   0        D. Rick                                                                                                                                               
+31    121   0        A. Tyreese                                                                                                                                            
+31    122   0        B. Sam                                                                                                                                                
+31    123   1        C. Axel                                                                                                                                               
+31    124   0        D. Carl                                                                                                                                               
+32    125   1        A. Eva                                                                                                                                                
+32    126   0        B. Chris                                                                                                                                              
+32    127   0        C. Nora                                                                                                                                               
+32    128   0        D. Natalie                                                                                                                                            
+33    129   1        A. The chipped cup                                                                                                                                    
+33    130   0        B. The cracked mug                                                                                                                                    
+33    131   0        C. Rumple's magic amulet                                                                                                                              
+33    132   0        D. His heart in a box                                                                                                                                 
+Question Number is: 13
+Num   Question                                                                                                                                                                                                 Type                
+13    In the sci-fi show "Marvel's Agents of S.H.I.E.L.D", what is the name of the terrorist organization that resurfaces, despite it being believed to have been wiped out by Captain America in 1945?        MultipleChoice      
+QNum  ANum  Correct  Answer                                                                                                                                                
+13    49    0        A. Schutzstaffel                                                                                                                                      
+13    50    0        B. Isis                                                                                                                                               
+13    51    1        C. Hydra                                                                                                                                              
+13    52    0        D. Deathlok                                                                                                                                           
+Adding multiple choice question : What is my name?
+New Question Number: 34
+Inserted Question
+Inserted Answers
+Adding true/false question : I am a princess
+New Question Number: 35
+Inserted Question
+Adding short-answer question : What is my last name?
+New Question Number: 36
+Inserted Question
+Would you like to add a new question to the database?
+yes
+Please enter the question, text only, with your desired punction:
+What is the last thing I ate?
+Is the question 1: Multiple Choice, 2: True/False, or 3: Short Answer?
+4
+Error: please type either '1', '2', or '3', then press enter.
+Is the question 1: Multiple Choice, 2: True/False, or 3: Short Answer?
+1
+New Question Number: 37
+Inserted Question
+There are four multiple choice answers that can be given, and only one may be correct.
+They will be formatted within the database automatically.
+Enter the first answer, text only:
+Pizza
+Enter the second answer, text only:
+Cookies
+Enter the third answer, text only:
+Icecream
+Enter the fourth answer, text only:
+A Blanket
+Inserted Answers
+Do you want to add another question to the database? (if no, type 'exit' to end)
+yes
+Please enter the question, text only, with your desired punction:
+I am a buffalo
+Is the question 1: Multiple Choice, 2: True/False, or 3: Short Answer?
+2
+New Question Number: 38
+Inserted Question
+Is this question true or false? t/f
+f
+Do you want to add another question to the database? (if no, type 'exit' to end)
+yes
+Please enter the question, text only, with your desired punction:
+What is my middle name?
+Is the question 1: Multiple Choice, 2: True/False, or 3: Short Answer?
+3
+New Question Number: 39
+Inserted Question
+Enter the answer, text only, with your desired punctuation:
+Leigh
+Do you want to add another question to the database? (if no, type 'exit' to end)
+exit
+
+----------------QUESTIONS------------------
+Num   Question                                                                                                                                                                                                 Type                
+1     In the anime "Free!", what do the four main characters of the Iwatobi Swim Club have in common?                                                                                                          MultipleChoice      
+2     In the anime "Ouran High School Host Club", what are the names of the red-haired twins that are both hosts in the club?                                                                                  MultipleChoice      
+3     In the anime "Death Note", what is Light Yagami known as once mass amounts of criminals begin dying mysteriously as a result of him using the Death Note?                                                MultipleChoice      
+4     In the anime "Attack on Titan", what are Eren Yeager and the rest of the Survey Corp taught to do in order to kill a titan?                                                                              MultipleChoice      
+5     In the anime "Parasyte: The Maxim", why does the main character Shinichi Izumi not get completely taken over by the alien parasite trying to attack him?                                                 MultipleChoice      
+6     In the sitcom "Seinfeld", what was George Costanza known for doing when a kitchen caught fire at a child's birthday party?                                                                               MultipleChoice      
+7     In the sitcom "Big Bang Theory", how was the elevator originally broken?                                                                                                                                 MultipleChoice      
+8     In the sitcom "Everybody Loves Raymond", what is peculiar about Robert Barone's eating habits?                                                                                                           MultipleChoice      
+9     In the sitcom "How I Met Your Mother", Barney Stinson is known for what?                                                                                                                                 MultipleChoice      
+10    In the sitcom "Fresh Prince of Bel-Air", where was Will Smith's character originally from before he moved to Bel-Air?                                                                                    MultipleChoice      
+11    In the sci-fi show "Supernatural", what killed Sam and Dean's mother?                                                                                                                                    MultipleChoice      
+12    In the sci-fi show "Being Human", why does Sally ignore her door, forfeiting her chance to move on to the afterlife?                                                                                     MultipleChoice      
+13    In the sci-fi show "Marvel's Agents of S.H.I.E.L.D", what is the name of the terrorist organization that resurfaces, despite it being believed to have been wiped out by Captain America in 1945?        MultipleChoice      
+14    In the sci-fi show "Doctor Who", who is the actor that plays the Tenth Doctor?                                                                                                                           MultipleChoice      
+15    In the sci-fi show "Land of the Lost", what causes the father Rick and his two children, Will and Holly, to become trapped in the unknown world?                                                         MultipleChoice      
+16    Which popular 1990s TV series that ran from 1994-2004 featured characters named Rachel, Monica, Phoebe, Joey, Chandler, and Ross?                                                                        MultipleChoice      
+17    Which cartoon television show based on the Griffin family became popular in the early 2000s?                                                                                                             MultipleChoice      
+18    What were the names of the two government agents played by David Duchovny and Gillian Anderson in the 1993-2002 series X-Files?                                                                          MultipleChoice      
+19    Which popular science fiction franchise aired its first episode in 1966?                                                                                                                                 MultipleChoice      
+20    Who won season 1 of American Idol?                                                                                                                                                                       MultipleChoice      
+21    What is the area of focus in CSI?                                                                                                                                                                        MultipleChoice      
+22    Who was the director of Jackass The Movie?                                                                                                                                                               MultipleChoice      
+23    What show are these three characters from: DJ, Michelle and Joey?                                                                                                                                        MultipleChoice      
+24    In the fantasy show "Game of Thrones", how many dragons does Daenerys own?                                                                                                                               MultipleChoice      
+25    In the fantasy show "Game of Thrones", what are Daenerys' dragons named?                                                                                                                                 MultipleChoice      
+26    In the fantasy show "Game of Thrones", which character killed Joffrey?                                                                                                                                   MultipleChoice      
+27    What does NCIS stand for?                                                                                                                                                                                MultipleChoice      
+28    In the drama show "Lost", how many rafts did the survivors make during season 1?                                                                                                                         MultipleChoice      
+29    In the drama show "Law & Order", who is the captain of the Special Victims Unit?                                                                                                                         MultipleChoice      
+30    In the horror show "The Walking Dead", who is the first to die without being bitten?                                                                                                                     MultipleChoice      
+31    In the horror show "The Walking Dead", who thought Carol was a lesbian?                                                                                                                                  MultipleChoice      
+32    In the fantasy show "Once Upon a Time", what was Snow White's mother's name?                                                                                                                             MultipleChoice      
+33    In the fantasy show "Once Upon a Time", what was a symbol of Rumple and Belle's love?                                                                                                                    MultipleChoice      
+34    What is my name?                                                                                                                                                                                         Multiple Choice     
+35    True/False: I am a princess.                                                                                                                                                                             TrueFalse           
+36    What is my last name?                                                                                                                                                                                    ShortAnswer         
+37    What is the last thing I ate?                                                                                                                                                                            MultipleChoice      
+38    True/False: I am a buffalo                                                                                                                                                                               TrueFalse           
+39    What is my middle name?                                                                                                                                                                                  ShortAnswer         
+
+----------------ANSWERS------------------
+QNum  ANum  Correct  Answer                                                                                                                                                
+1     1     0        A. They are all geniuses                                                                                                                              
+1     2     1        B. They all have feminine names                                                                                                                       
+1     3     0        C. They were all born within the same month                                                                                                           
+1     4     0        D. They all have the same hair color                                                                                                                  
+2     5     1        A. Kaoru and Hikaru                                                                                                                                   
+2     6     0        B. Haruhi and Mitsukuni                                                                                                                               
+2     7     0        C. Kyoya and Renge                                                                                                                                    
+2     8     0        D. Tamaki and Takashi                                                                                                                                 
+3     9     0        A. God                                                                                                                                                
+3     10    0        B. Ryuk                                                                                                                                               
+3     11    1        C. Kira                                                                                                                                               
+3     12    0        D. Shinigami                                                                                                                                          
+4     13    0        A. Hit the weak spot on the titan's stomach                                                                                                           
+4     14    1        B. Slice the weak spot on the back of the titan's neck                                                                                                
+4     15    0        C. Stab the titan directly between the eyes                                                                                                           
+4     16    0        D. Get eaten by the titan                                                                                                                             
+5     17    0        A. Shinichi wakes up and fights off the alien                                                                                                         
+5     18    0        B. The alien is wounded and therefore not strong enough                                                                                               
+5     19    0        C. Shinichi is immune to the alien's effects                                                                                                          
+5     20    1        D. Shinichi was wearing headphones when attacked                                                                                                      
+6     21    0        A. Making sure the children got out safely                                                                                                            
+6     22    0        B. Putting out the fire with an expensive scarf                                                                                                       
+6     23    0        C. Pouring alcohol on the fire and accidentally making it worse                                                                                       
+6     24    1        D. Yelling and pushing the children out of the way to save himself                                                                                    
+7     25    1        A. An explosive container of rocket fuel                                                                                                              
+7     26    0        B. Sheldon causing the power to go out                                                                                                                
+7     27    0        C. Leonard hitting the button too hard                                                                                                                
+7     28    0        D. It is still unknown why the elevator is out of order                                                                                               
+8     29    0        A. He only eats Tacos on Tuesdays                                                                                                                     
+8     30    0        B. He prays to his dead dog before every meal                                                                                                         
+8     31    1        C. He touches the food to his chin before every bite                                                                                                  
+8     32    0        D. He is the only vegetarian in the family                                                                                                            
+9     33    0        A. Being extremely tall                                                                                                                               
+9     34    1        B. Being a womanizer                                                                                                                                  
+9     35    0        C. Being excessively polite                                                                                                                           
+9     36    0        D. Having the largest hands                                                                                                                           
+10    37    0        A. East Philippines                                                                                                                                   
+10    38    0        B. North Philipsburg                                                                                                                                  
+10    39    1        C. West Philadelphia                                                                                                                                  
+10    40    0        D. South Philmont                                                                                                                                     
+11    41    0        A. A red-tailed Gryphon                                                                                                                               
+11    42    0        B. A blue-skinned Wendigo                                                                                                                             
+11    43    1        C. A yellow-eyed Demon                                                                                                                                
+11    44    0        D. A blonde-haired Leviathan                                                                                                                          
+12    45    0        A. Sally does not know how to open doors as a ghost and could not touch it                                                                            
+12    46    1        B. Aiden was stabbed by a wooden stake and in critical condition, causing her to stay and make sure he survived                                       
+12    47    0        C. Josh began to transform at the full moon, and she possessed him in order to save innocent bystanders                                               
+12    48    0        D. Another ghost went through the door thinking it was theirs, and stole her moment to pass on                                                        
+13    49    0        A. Schutzstaffel                                                                                                                                      
+13    50    0        B. Isis                                                                                                                                               
+13    51    1        C. Hydra                                                                                                                                              
+13    52    0        D. Deathlok                                                                                                                                           
+14    53    0        A. Christopher Eccleston                                                                                                                              
+14    54    1        B. David Tennant                                                                                                                                      
+14    55    0        C. Sylvester McCoy                                                                                                                                    
+14    56    0        D. Matt Smith                                                                                                                                         
+15    57    0        A. The sky opens up on a camping trip and sucks their tent into an alternate timeline                                                                 
+15    58    0        B. A scientist places a portal in their house, using the family as an experiment to test inter-dimensional travel                                     
+15    59    0        C. Rick was experimenting with the theory of time travel and accidentally brought them into a place where all timelines of the world mix together     
+15    60    1        D. The family was rafting when an earthquake caused the ground to open up, landing them in the unfamiliar world                                       
+16    61    1        A. Friends                                                                                                                                            
+16    62    0        B. Enemies                                                                                                                                            
+16    63    0        C. Acquaintances                                                                                                                                      
+16    64    0        D. Everybody Still Talks About It, Let's Just Get Over It Please                                                                                      
+17    65    1        A. Family Guy                                                                                                                                         
+17    66    0        B. Family Man                                                                                                                                         
+17    67    0        C. Family Guys                                                                                                                                        
+17    68    0        D. My Beloved Family                                                                                                                                  
+18    69    0        A. Fox Murderer and Dana Scully                                                                                                                       
+18    70    0        B. Fox Mulder and Dana Skull                                                                                                                          
+18    71    0        C. Fox Muld and Diana Scully                                                                                                                          
+18    72    1        D. Fox Mulder and Dana Scully                                                                                                                         
+19    73    0        A. Start Trek                                                                                                                                         
+19    74    0        B. Star Wars                                                                                                                                          
+19    75    0        C. Dr. What                                                                                                                                           
+19    76    1        D. Lost in Space                                                                                                                                      
+20    77    1        A. Kelly Clarkson                                                                                                                                     
+20    78    0        B. Kelly Morrison                                                                                                                                     
+20    79    0        C. Kelly Kee                                                                                                                                          
+20    80    0        D. Kelly Taylor                                                                                                                                       
+21    81    1        A. Crime                                                                                                                                              
+21    82    0        B. Chemistry                                                                                                                                          
+21    83    0        C. Medicine                                                                                                                                           
+21    84    0        D. Natural Disasters                                                                                                                                  
+22    85    1        A. Jeff Tremaine                                                                                                                                      
+22    86    0        B. Joffrey Tremannie                                                                                                                                  
+22    87    0        C. George Tremanner                                                                                                                                   
+22    88    0        D. Ithastobea Forest                                                                                                                                  
+23    89    1        A. Full House                                                                                                                                         
+23    90    0        B. Empty House                                                                                                                                        
+23    91    0        C. Full Cabinet                                                                                                                                       
+23    92    0        D. Little House on The Praire                                                                                                                         
+24    93    1        A. Three                                                                                                                                              
+24    94    0        B. Four                                                                                                                                               
+24    95    0        C. Five                                                                                                                                               
+24    96    0        D. Over Nine Thousand                                                                                                                                 
+25    97    1        A. Drogon, Viserion, and Rhaegal                                                                                                                      
+25    98    0        B. Drogon, Viesh, and Rhaeg                                                                                                                           
+25    99    0        C. Drogon, Visrion, and Rhomnir                                                                                                                       
+25    100   0        D. Drogal, Viesrion, and Rhaegal                                                                                                                      
+26    101   0        A. Olema                                                                                                                                              
+26    102   0        B. Olaf                                                                                                                                               
+26    103   0        C. Omar                                                                                                                                               
+26    104   1        D. Olenna                                                                                                                                             
+27    105   0        A. Nationalistic Criminal Investigative Service                                                                                                       
+27    106   0        B. National Criminal Inquiry Service                                                                                                                  
+27    107   1        C. Naval Criminal Investigative Service                                                                                                               
+27    108   0        D. National Criminal Investigatigation of Supects                                                                                                     
+28    109   1        A. Two                                                                                                                                                
+28    110   0        B. One                                                                                                                                                
+28    111   0        C. Three                                                                                                                                              
+28    112   0        D. Six                                                                                                                                                
+29    113   0        A. Captain Noris                                                                                                                                      
+29    114   0        B. Captain Cragen                                                                                                                                     
+29    115   0        C. Captain Craig                                                                                                                                      
+29    116   0        D. Captain Cracken                                                                                                                                    
+30    117   1        A. Jacqui                                                                                                                                             
+30    118   0        B. Mohamed                                                                                                                                            
+30    119   0        C. Lori                                                                                                                                               
+30    120   0        D. Rick                                                                                                                                               
+31    121   0        A. Tyreese                                                                                                                                            
+31    122   0        B. Sam                                                                                                                                                
+31    123   1        C. Axel                                                                                                                                               
+31    124   0        D. Carl                                                                                                                                               
+32    125   1        A. Eva                                                                                                                                                
+32    126   0        B. Chris                                                                                                                                              
+32    127   0        C. Nora                                                                                                                                               
+32    128   0        D. Natalie                                                                                                                                            
+33    129   1        A. The chipped cup                                                                                                                                    
+33    130   0        B. The cracked mug                                                                                                                                    
+33    131   0        C. Rumple's magic amulet                                                                                                                              
+33    132   0        D. His heart in a box                                                                                                                                 
+34    133   1        A. Amber                                                                                                                                              
+34    134   0        B. Jessica                                                                                                                                            
+34    135   0        C. Bobby                                                                                                                                              
+34    136   0        D. Fluffy                                                                                                                                             
+35    137   0        True                                                                                                                                                  
+35    138   1        False                                                                                                                                                 
+36    139   1        Wise                                                                                                                                                  
+37    140   0        A. Pizza                                                                                                                                              
+37    141   0        B. Cookies                                                                                                                                            
+37    142   0        C. Icecream                                                                                                                                           
+37    143   1        D. A Blanket                                                                                                                                          
+38    144   0        True                                                                                                                                                  
+38    145   1        False                                                                                                                                                 
+39    146   1        Leigh 
