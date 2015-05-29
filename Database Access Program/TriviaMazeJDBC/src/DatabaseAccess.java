@@ -17,10 +17,24 @@ public class DatabaseAccess
 		{
 			Connection c = getConnection();
 			MyQuery myQuery = new MyQuery(c);
+			Question myQuestion;
 			
+			//print entire database
 			myQuery.printAllQuestions();
+			System.out.println();
 			myQuery.printAllAnswers();
-			myQuery.getQuestion();
+			System.out.println();
+			
+			//get question and print using question object methods
+			myQuestion = myQuery.getQuestion();
+			System.out.println("\nPrinting question object:");
+			myQuestion.printQuestion();
+			myQuestion.printAnswers();
+			System.out.println("Correct answer is:");
+			System.out.println(myQuestion.getCorrect());
+			
+			//These are more testers for handling the database, which are explained in the MyQuery class
+			/*
 			System.out.println("Adding multiple choice question : What is my name?");
 			myQuery.addQuestion("What is my name?", "Multiple Choice");
 			myQuery.addMCAnswers("A. Amber", 1, "B. Jessica", 0, "C. Bobby", 0, "D. Fluffy", 0);
@@ -34,8 +48,8 @@ public class DatabaseAccess
 			myQuery.printAllQuestions();
 			myQuery.printAllAnswers();
 			
-			//rs.close();
-			//stmnt.close();
+			*/
+			
 			c.close();
 		}
 		catch ( Exception e )

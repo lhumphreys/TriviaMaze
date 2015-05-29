@@ -16,6 +16,7 @@ public class MyQuery
 		stmnt = conn.createStatement();
 	}
 	
+	//Prints the entire 'questions' table in the database, including column headers
 	public void printAllQuestions()throws SQLException
 	{
 		System.out.println();
@@ -38,6 +39,7 @@ public class MyQuery
 		}
 	}
 	
+	//Prints the entire 'answers' table in the database, including column headers
 	public void printAllAnswers()throws SQLException
 	{
 		System.out.println();
@@ -64,7 +66,7 @@ public class MyQuery
 	
 	//Do we want to not have any possibility of duplicating questions? I can do this but it requires a list
 	//Check types of questions and create a question object that has all components, including answers, for easier display in game
-	public void getQuestion()throws SQLException
+	public Question getQuestion()throws SQLException
 	{
 		int newQNum = rand.nextInt(MAX)+1;
 		System.out.println("Question Number is: " + newQNum);
@@ -93,6 +95,7 @@ public class MyQuery
 		String correct = "Correct";
 		String answer = "Answer";
 		System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+		Question newQuestion = new Question(question, qType);//Create question object
 		
 		while (rs.next())
 		{
@@ -101,11 +104,15 @@ public class MyQuery
 			correct = rs.getString("Correct");
 			answer = rs.getString("Answer");
 			System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+			newQuestion.addAnswer(answer, Integer.parseInt(correct));//Add current answer to the question object
 		}
 		
+		return newQuestion;
 		
 	}
 	
+	//Asks the user if they wish to add a new question, and upon affirmative asks the user for question
+	//specifics before entering it into the database.
 	public void askQuestionInfo()throws SQLException
 	{
 		Scanner kb = new Scanner(System.in);
@@ -135,7 +142,7 @@ public class MyQuery
 				if((choice < 1)||(choice > 3))
 					System.out.println("Error: please type either '1', '2', or '3', then press enter.");
 			}
-			if(choice == 1)
+			if(choice == 1)//Adding a multiple choice question
 			{
 				type = "MultipleChoice";
 				addQuestion(input, type);
@@ -172,7 +179,7 @@ public class MyQuery
 				addMCAnswers(ansA, a, ansB, b, ansC, c, ansD, d);
 				
 			}
-			else if(choice == 2)
+			else if(choice == 2)//Adding a true/false question
 			{
 				type = "TrueFalse";
 				input = "True/False: " + input;
@@ -188,7 +195,7 @@ public class MyQuery
 				
 				addTFAnswers(correctTrue, correctFalse);
 			}
-			else
+			else//adding a short answer question
 			{
 				type = "ShortAnswer";
 				addQuestion(input, type);
@@ -207,6 +214,7 @@ public class MyQuery
 		
 	}
 	
+	//Adds a new question into the database, along with it's specified type
 	public void addQuestion(String newQuestion, String newQType)throws SQLException
 	{
 		String query = "SELECT MAX(QuestionNum) FROM questions;";
@@ -226,8 +234,10 @@ public class MyQuery
 		
 	}
 	
+	//Adds four multiple choice answers into the database, passed in as Strings, as well as an int for each answer indicating if it is correct
 	public void addMCAnswers(String ansA, int aCorr, String ansB, int bCorr, String ansC, int cCorr, String ansD, int dCorr)throws SQLException
 	{
+		//Get the question number that the answers correspond to
 		String query = "SELECT MAX(AnswerNum) FROM answers;";
 		rs = stmnt.executeQuery(query);
 		
@@ -262,8 +272,10 @@ public class MyQuery
 		System.out.println("Inserted Answers");
 	}
 	
+	//Adds two true/false answers into the database, accepts two ints passed in to indicate which is the correct answer.
 	public void addTFAnswers(int corrT, int corrF)throws SQLException
 	{
+		//Get the question number that the answers correspond to
 		String query = "SELECT MAX(AnswerNum) FROM answers;";
 		rs = stmnt.executeQuery(query);
 		
@@ -282,8 +294,10 @@ public class MyQuery
 		stmnt.executeUpdate(query);
 	}
 	
+	//Adds a single short-answer string into the database, accepting the string as a parameter that contains the answer
 	public void addSAnswer(String ans)throws SQLException
 	{
+		//Get the question number that the answer corresponds to
 		String query = "SELECT MAX(AnswerNum) FROM answers;";
 		rs = stmnt.executeQuery(query);
 		
