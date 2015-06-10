@@ -29,6 +29,7 @@ public class GameLoop {
 			case 2:
 				break;
 			case 3:
+				printAbout(kb);
 				break;
 			case 0:
 				adminTool(kb, myQuery);
@@ -41,6 +42,12 @@ public class GameLoop {
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			System.exit(0);
 	    }
+	}
+	
+	static Maze loadGame(Scanner kb)
+	{
+		System.out.println("Please enter the name of your game save: ");
+		System.out.println("Choice: ");
 	}
 	
 	static boolean askQuestion(Scanner kb, MyQuery myQuery)
