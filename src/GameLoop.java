@@ -1,5 +1,6 @@
 
 import java.util.*;
+import java.io.IOException;
 import java.sql.*;
 
 public class GameLoop {
@@ -48,6 +49,20 @@ public class GameLoop {
 	{
 		System.out.println("Please enter the name of your game save: ");
 		System.out.println("Choice: ");
+		
+		String gameName = kb.nextLine();
+		GameSerializator gs = GameSerializator.getInstance();
+		
+		Maze maze = null;
+		try {
+			maze = gs.loadMaze(gameName);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("That save game was not found.");
+		}
+		return maze;
 	}
 	
 	static boolean askQuestion(Scanner kb, MyQuery myQuery)
@@ -64,7 +79,11 @@ public class GameLoop {
 		}
 		
 		question.printQuestion();
-		question.printAnswers();
+		
+		if(question.isMultipleChoice())
+		{
+			question.printAnswers();
+		}
 		
 		String answer = kb.nextLine();
 		
@@ -77,9 +96,10 @@ public class GameLoop {
 	{
 		boolean won = false;
 		boolean lost = false;
+		boolean quit = false;
 		int choice;
 		
-		while(!won && !lost)
+		while(!won && !lost && !quit)
 		{
 			Block pos = maze.getCurrentBlock();
 			pos.printRoom();
@@ -153,6 +173,7 @@ public class GameLoop {
 					}
 				}
 				break;
+				
 			case 4:
 				
 				if(pos.isBlockedLeft())
@@ -176,6 +197,20 @@ public class GameLoop {
 				}
 				break;
 				
+			case 0:
+				System.out.println("Do you want to save before quitting?");
+				System.out.println("[1] Yes");
+				System.out.println("[2] No, just quit.");
+				
+				choice = kb.nextInt();
+				kb.nextLine();
+				
+				if(choice == 1)
+				{
+					saveGame(kb, maze);
+				}
+				
+				quit = true;
 			}
 		}
 		
@@ -184,6 +219,23 @@ public class GameLoop {
 		
 		if(lost)
 			System.out.println("There's nowhere else to move!  Too bad.");
+	}
+	
+	static void saveGame(Scanner kb, Maze maze)
+	{
+		System.out.println("Please enter a name for your save game: ");
+		String gameName = kb.nextLine();
+		
+		GameSerializator gs = GameSerializator.getInstance();
+		
+		try {
+			gs.saveMaze(maze, gameName);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Game saved!  Remember the name you entered to load your game later.");
 	}
 	
 	static boolean checkWon(Maze maze)
@@ -245,7 +297,7 @@ public class GameLoop {
 		System.out.println("[3] East");
 		System.out.println("[4] West");
 		System.out.println();
-		System.out.println("[0] Save and Quit");
+		System.out.println("[0] Quit");
 		System.out.println("Choice: ");
 		
 		

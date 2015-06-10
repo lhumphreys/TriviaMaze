@@ -73,4 +73,11 @@ public class Question
 			return false;
 	}
 	
+	public boolean isMultipleChoice()
+	{
+		if(this.type.equals("MultipleChoice"))
+			return true;
+		return false;
+	}
+	
 }//end class

@@ -8,13 +8,14 @@ public class MyQuery
 	private Statement stmnt = null;
 	private ResultSet rs = null;
 	Random rand = new Random();
-	int MAX = 33;
+	int MAX = 56;//the maximum number of questions in the table
 	
 	public MyQuery(Connection c)throws SQLException
 	{
 		conn = c;
 		stmnt = conn.createStatement();
 	}
+	
 	
 	//Prints the entire 'questions' table in the database, including column headers
 	public void printAllQuestions()throws SQLException
