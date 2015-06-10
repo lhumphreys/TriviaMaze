@@ -15,10 +15,7 @@ public class GameLoop {
 			MyQuery myQuery = new MyQuery(c);
 		
 			int choice = mainMenu(kb);
-			while(choice == -1)
-			{
-				choice = mainMenu(kb);
-			}
+			
 			
 			switch(choice)
 			{
@@ -33,7 +30,8 @@ public class GameLoop {
 				break;
 			case 3:
 				break;
-			case 9:
+			case 0:
+				adminTool(kb, myQuery);
 				break;
 			}
 		c.close();
@@ -241,6 +239,7 @@ public class GameLoop {
 		System.out.println("[4] West");
 		System.out.println();
 		System.out.println("[0] Save and Quit");
+		System.out.println("Choice: ");
 		
 		
 		try{
@@ -283,5 +282,79 @@ public class GameLoop {
 			System.out.println("Error: connection is null!");
 		}
 		return connection;
+	}
+	
+	public static void printAbout(Scanner kb)
+	{
+		System.out.println("TV Trivia Game");
+		System.out.println();
+		System.out.println("Written by THE ILLUMINATI");
+		System.out.println();
+		System.out.println("Laura Humphreys");
+		System.out.println("Amber Wise");
+		System.out.println("Augusto Melo");
+		System.out.println();
+		System.out.println("[0] Return");
+		System.out.println("Choice: ");
+		
+		kb.nextLine();
+	}
+	
+	public static void adminTool(Scanner kb, MyQuery myQuery)
+	{
+		int choice = -1;
+		
+		while(choice != 0)
+		{
+			choice = adminMenu(kb);
+			try 
+			{
+				switch(choice)
+				{
+				case 1:
+					
+					myQuery.askQuestionInfo();
+					break;
+				case 2:
+					myQuery.printAllQuestions();
+					break;
+				case 3:
+					myQuery.printAllAnswers();
+					break;
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static int adminMenu(Scanner kb)
+	{
+		int choice = -1;
+		
+		System.out.println("[1] Add new question");
+		System.out.println("[2] Print all questions");
+		System.out.println("[3] Print all answers");
+		System.out.println("[0] Cancel");
+		System.out.println("Choice: ");
+		
+		try{
+			choice = kb.nextInt();
+			kb.nextLine();
+			
+			if(choice != 1 && choice != 2 && choice != 3 && choice != 0)
+			{
+				System.out.println("Invalid menu choice.");
+				System.out.println();
+			}
+		}
+		catch(InputMismatchException e)
+		{
+			System.out.println("You must enter an integer.");
+			System.out.println();
+		}
+		
+		return choice;
 	}
 }

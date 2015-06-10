@@ -1,5 +1,3 @@
-package Game;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import MazeGen.Maze;
+
 
 public class GameSerializator {
 	private static GameSerializator INSTANCE;

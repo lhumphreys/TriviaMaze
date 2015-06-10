@@ -309,4 +309,6 @@ public class MyQuery
 		stmnt.executeUpdate(query);
 	}
 	
+	
+	
 }
