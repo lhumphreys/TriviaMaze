@@ -1,5 +1,4 @@
-package DataBase;
-
+package database;
 import java.util.ArrayList;
 
 public class Question
@@ -62,7 +61,7 @@ public class Question
 	public boolean isCorrect(String ans)
 	{
 		//For multiple choice, only the first character must match the correct answer
-		if(this.type.equals("Multiple Choice"))
+		if(this.type.equals("MultipleChoice"))
 		{
 			if(ans.toLowerCase().charAt(0) == this.answers.get(this.correctIndex).toLowerCase().charAt(0))
 				return true;
@@ -73,6 +72,13 @@ public class Question
 			return true;
 		else//If it does not match the answer at the correct index, their answer is wrong
 			return false;
+	}
+	
+	public boolean isMultipleChoice()
+	{
+		if(this.type.equals("MultipleChoice"))
+			return true;
+		return false;
 	}
 	
 }//end class

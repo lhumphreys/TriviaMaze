@@ -1,5 +1,4 @@
-package DataBase;
-
+package database;
 import java.sql.*;
 import java.util.Random;
 import java.util.Scanner;
@@ -10,13 +9,14 @@ public class MyQuery
 	private Statement stmnt = null;
 	private ResultSet rs = null;
 	Random rand = new Random();
-	int MAX = 33;
+	int MAX = 56;//the maximum number of questions in the table
 	
 	public MyQuery(Connection c)throws SQLException
 	{
 		conn = c;
 		stmnt = conn.createStatement();
 	}
+	
 	
 	//Prints the entire 'questions' table in the database, including column headers
 	public void printAllQuestions()throws SQLException
@@ -71,41 +71,41 @@ public class MyQuery
 	public Question getQuestion()throws SQLException
 	{
 		int newQNum = rand.nextInt(MAX)+1;
-		System.out.println("Question Number is: " + newQNum);
+		//System.out.println("Question Number is: " + newQNum);
 		
 		//Get question corresponding with random number
 		String query = "SELECT * FROM questions WHERE QuestionNum="+newQNum+";";
 		rs = stmnt.executeQuery(query);
 		
 		//Print out Question
-		String qNum = "Num";
+		//String qNum = "Num";
 		String question = "Question";
 		String qType = "Type";
-		System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
-		qNum = rs.getString("QuestionNum");
+		//System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
+		//qNum = rs.getString("QuestionNum");
 		question = rs.getString("Question");
 		qType = rs.getString("Type");
-		System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
+		//System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
 		
 		//Get answers corresponding with question number
 		query = "SELECT * FROM answers WHERE QuestionNum="+newQNum+";";
 		rs = stmnt.executeQuery(query);
 		
 		//Print out Answers
-		qNum = "QNum";
-		String aNum = "ANum";
+		//qNum = "QNum";
+		//String aNum = "ANum";
 		String correct = "Correct";
 		String answer = "Answer";
-		System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+		//System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
 		Question newQuestion = new Question(question, qType);//Create question object
 		
 		while (rs.next())
 		{
-			qNum = rs.getString("QuestionNum");
-			aNum = rs.getString("AnswerNum");
+			//qNum = rs.getString("QuestionNum");
+			//aNum = rs.getString("AnswerNum");
 			correct = rs.getString("Correct");
 			answer = rs.getString("Answer");
-			System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+			//System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
 			newQuestion.addAnswer(answer, Integer.parseInt(correct));//Add current answer to the question object
 		}
 		
@@ -310,5 +310,7 @@ public class MyQuery
 		query = "INSERT INTO answers(QuestionNum,AnswerNum,Correct,Answer) VALUES("+MAX+","+maxANum+",1,'"+ans+"');";
 		stmnt.executeUpdate(query);
 	}
+	
+	
 	
 }

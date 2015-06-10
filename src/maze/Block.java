@@ -1,6 +1,8 @@
+package maze;
 
+import java.io.Serializable;
 
-public class Block {
+public class Block implements Serializable{
 	private int[] walls;
 	private boolean isCut;
 

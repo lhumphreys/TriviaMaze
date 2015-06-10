@@ -1,7 +1,14 @@
+package core;
 
 import java.util.*;
 import java.io.IOException;
 import java.sql.*;
+
+import maze.Block;
+import maze.Maze;
+import maze.MazeGen;
+import database.MyQuery;
+import database.Question;
 
 public class GameLoop {
 
@@ -14,9 +21,9 @@ public class GameLoop {
 		{
 			Connection c = getConnection();
 			MyQuery myQuery = new MyQuery(c);
+			Maze maze;
 		
 			int choice = mainMenu(kb);
-			
 			
 			switch(choice)
 			{
@@ -24,10 +31,12 @@ public class GameLoop {
 				int [] start = {0,0};
 				int [] end = {3,3};
 				MazeGen gen = MazeGen.getInstance();
-				Maze maze = gen.generate(4, start, end);
+				maze = gen.generate(5, start, end);
 				loop(kb, maze, myQuery);
 				break;
 			case 2:
+				maze = loadGame(kb);
+				loop(kb, maze, myQuery);
 				break;
 			case 3:
 				printAbout(kb);
@@ -48,7 +57,7 @@ public class GameLoop {
 	static Maze loadGame(Scanner kb)
 	{
 		System.out.println("Please enter the name of your game save: ");
-		System.out.println("Choice: ");
+		System.out.println("(For testing, try 'Laura')");
 		
 		String gameName = kb.nextLine();
 		GameSerializator gs = GameSerializator.getInstance();

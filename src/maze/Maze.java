@@ -1,8 +1,9 @@
+package maze;
 
-
+import java.io.Serializable;
 import java.security.InvalidParameterException;
 
-public class Maze {
+public class Maze implements Serializable {
 	private Block[][] blocks;
 	private int[] end;
 	private int[] start;
