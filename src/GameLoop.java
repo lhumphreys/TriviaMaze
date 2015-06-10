@@ -47,7 +47,7 @@ public class GameLoop {
 	
 	static boolean askQuestion(Scanner kb, MyQuery myQuery)
 	{
-		boolean correct = false;
+		boolean correct;
 		Question question = null;
 		
 		try {
@@ -61,7 +61,9 @@ public class GameLoop {
 		question.printQuestion();
 		question.printAnswers();
 		
+		String answer = kb.nextLine();
 		
+		correct = question.isCorrect(answer);
 		
 		return correct;
 	}
@@ -90,13 +92,16 @@ public class GameLoop {
 				{
 					if(askQuestion(kb, myQuery))
 					{
+						System.out.println("Correct!");
 						maze.movePlayerUp();
 						won = checkWon(maze);
-						lost = checkLost(maze);
+						
 					}
 					else
 					{
+						System.out.println("Wrong answer!  The door is locked!");
 						pos.blockUp();
+						lost = checkLost(maze);
 					}
 				}
 				break;
@@ -110,13 +115,15 @@ public class GameLoop {
 				{
 					if(askQuestion(kb, myQuery))
 					{
+						System.out.println("Correct!");
 						maze.movePlayerDown();
 						won = checkWon(maze);
-						lost = checkLost(maze);
 					}
 					else
 					{
+						System.out.println("Wrong answer!  The door is locked!");
 						pos.blockDown();
+						lost = checkLost(maze);
 					}
 				}
 				break;
@@ -129,13 +136,15 @@ public class GameLoop {
 				{
 					if(askQuestion(kb, myQuery))
 					{
+						System.out.println("Correct!");
 						maze.movePlayerRight();
 						won = checkWon(maze);
-						lost = checkLost(maze);
 					}
 					else
 					{
+						System.out.println("Wrong answer!  The door is locked!");
 						pos.blockRight();
+						lost = checkLost(maze);
 					}
 				}
 				break;
@@ -149,13 +158,15 @@ public class GameLoop {
 				{
 					if(askQuestion(kb, myQuery))
 					{
+						System.out.println("Correct!");
 						maze.movePlayerLeft();
 						won = checkWon(maze);
-						lost = checkLost(maze);
 					}
 					else
 					{
+						System.out.println("Wrong answer!  The door is locked!");
 						pos.blockLeft();
+						lost = checkLost(maze);
 					}
 				}
 				break;
@@ -202,6 +213,7 @@ public class GameLoop {
 		
 		try{
 		choice = kb.nextInt();
+		kb.nextLine();
 		
 		if(choice != 1 && choice != 2 && choice != 3 && choice != 0)
 		{
@@ -233,6 +245,7 @@ public class GameLoop {
 		
 		try{
 			choice = kb.nextInt();
+			kb.nextLine();
 			
 			if(choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 0)
 			{

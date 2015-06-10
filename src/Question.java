@@ -60,7 +60,7 @@ public class Question
 	public boolean isCorrect(String ans)
 	{
 		//For multiple choice, only the first character must match the correct answer
-		if(this.type.equals("Multiple Choice"))
+		if(this.type.equals("MultipleChoice"))
 		{
 			if(ans.toLowerCase().charAt(0) == this.answers.get(this.correctIndex).toLowerCase().charAt(0))
 				return true;

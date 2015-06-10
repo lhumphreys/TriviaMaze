@@ -69,7 +69,7 @@ public class MyQuery
 	public Question getQuestion()throws SQLException
 	{
 		int newQNum = rand.nextInt(MAX)+1;
-		System.out.println("Question Number is: " + newQNum);
+		//System.out.println("Question Number is: " + newQNum);
 		
 		//Get question corresponding with random number
 		String query = "SELECT * FROM questions WHERE QuestionNum="+newQNum+";";
@@ -79,11 +79,11 @@ public class MyQuery
 		String qNum = "Num";
 		String question = "Question";
 		String qType = "Type";
-		System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
+		//System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
 		qNum = rs.getString("QuestionNum");
 		question = rs.getString("Question");
 		qType = rs.getString("Type");
-		System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
+		//System.out.printf("%-5s %-200s %-20s\n", qNum, question, qType);
 		
 		//Get answers corresponding with question number
 		query = "SELECT * FROM answers WHERE QuestionNum="+newQNum+";";
@@ -94,7 +94,7 @@ public class MyQuery
 		String aNum = "ANum";
 		String correct = "Correct";
 		String answer = "Answer";
-		System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+		//System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
 		Question newQuestion = new Question(question, qType);//Create question object
 		
 		while (rs.next())
@@ -103,7 +103,7 @@ public class MyQuery
 			aNum = rs.getString("AnswerNum");
 			correct = rs.getString("Correct");
 			answer = rs.getString("Answer");
-			System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
+			//System.out.printf("%-5s %-5s %-8s %-150s\n", qNum, aNum, correct, answer);
 			newQuestion.addAnswer(answer, Integer.parseInt(correct));//Add current answer to the question object
 		}
 		
