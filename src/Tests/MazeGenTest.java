@@ -1,4 +1,4 @@
-package MazeGen;
+package Tests;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import MazeGen.Block;
+import MazeGen.Maze;
+import MazeGen.MazeGen;
 
 public class MazeGenTest {
 	@Test

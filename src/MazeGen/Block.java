@@ -1,6 +1,8 @@
 package MazeGen;
 
-public class Block {
+import java.io.Serializable;
+
+public class Block implements Serializable{
 	private int[] walls;
 	private boolean isCut;
 

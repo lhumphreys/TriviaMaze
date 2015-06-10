@@ -1,15 +1,16 @@
 package MazeGen;
 
+import java.io.Serializable;
 import java.security.InvalidParameterException;
 
-public class Maze {
+public class Maze implements Serializable {
 	private Block[][] blocks;
 	private int[] end;
 	private int[] start;
 	private int[] playerPosition;
 	private int mazeSize;
 
-	//Cannot be instantiated used outside its package
+	// Cannot be instantiated used outside its package
 	protected Maze(Block[][] blocks, int[] start, int[] end) {
 		this.blocks = blocks;
 		this.mazeSize = blocks.length;
@@ -33,6 +34,10 @@ public class Maze {
 			return true;
 		}
 		return false;
+	}
+
+	public int getMazeSize() {
+		return mazeSize;
 	}
 
 	public int[] getStart() {
