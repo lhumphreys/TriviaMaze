@@ -1,6 +1,6 @@
 
 import java.util.*;
-
+import java.sql.*;
 
 public class GameLoop {
 
@@ -8,36 +8,65 @@ public class GameLoop {
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("Welcome to the Trivia Maze Game!");
-		int choice = mainMenu(kb);
-		while(choice == -1)
+		
+		try
 		{
-			choice = mainMenu(kb);
+			Connection c = getConnection();
+			MyQuery myQuery = new MyQuery(c);
+		
+			int choice = mainMenu(kb);
+			while(choice == -1)
+			{
+				choice = mainMenu(kb);
+			}
+			
+			switch(choice)
+			{
+			case 1:
+				int [] start = {0,0};
+				int [] end = {3,3};
+				MazeGen gen = MazeGen.getInstance();
+				Maze maze = gen.generate(4, start, end);
+				loop(kb, maze, myQuery);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 9:
+				break;
+			}
+		c.close();
+		}
+		catch ( Exception e )
+		{
+			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+			System.exit(0);
+	    }
+	}
+	
+	static boolean askQuestion(Scanner kb, MyQuery myQuery)
+	{
+		boolean correct = false;
+		Question question = null;
+		
+		try {
+			question = myQuery.getQuestion();
+		} catch (SQLException e) {
+			// Auto-generated catch block
+			e.printStackTrace();
+			System.exit(0);
 		}
 		
-		switch(choice)
-		{
-		case 1:
-			int [] start = {0,0};
-			int [] end = {3,3};
-			MazeGen gen = MazeGen.getInstance();
-			Maze maze = gen.generate(4, start, end);
-			loop(kb, maze);
-			break;
-		case 2:
-			break;
-		case 3:
-			break;
-		case 9:
-			break;
-		}
+		question.printQuestion();
+		question.printAnswers();
+		
+		
+		
+		return correct;
 	}
 	
-	static boolean askQuestion()
-	{
-		return true;
-	}
-	
-	static void loop(Scanner kb, Maze maze)
+	static void loop(Scanner kb, Maze maze, MyQuery myQuery)
 	{
 		boolean won = false;
 		boolean lost = false;
@@ -59,7 +88,7 @@ public class GameLoop {
 				}
 				else
 				{
-					if(askQuestion())
+					if(askQuestion(kb, myQuery))
 					{
 						maze.movePlayerUp();
 						won = checkWon(maze);
@@ -79,7 +108,7 @@ public class GameLoop {
 				}
 				else
 				{
-					if(askQuestion())
+					if(askQuestion(kb, myQuery))
 					{
 						maze.movePlayerDown();
 						won = checkWon(maze);
@@ -98,7 +127,7 @@ public class GameLoop {
 				}
 				else
 				{
-					if(askQuestion())
+					if(askQuestion(kb, myQuery))
 					{
 						maze.movePlayerRight();
 						won = checkWon(maze);
@@ -118,7 +147,7 @@ public class GameLoop {
 				}
 				else
 				{
-					if(askQuestion())
+					if(askQuestion(kb, myQuery))
 					{
 						maze.movePlayerLeft();
 						won = checkWon(maze);
@@ -221,4 +250,25 @@ public class GameLoop {
 		return choice;
 	}
 	
+	public static Connection getConnection()
+	{
+		Connection connection = null;
+		try
+		{
+			Class.forName("org.sqlite.JDBC");
+			connection = DriverManager.getConnection("jdbc:sqlite:triviagame.db");
+			connection.setAutoCommit(false);//MAKES SURE DATABASE IS NOT ALTERED PERMANENTLY: CHANGE THIS BEFORE FINAL RELEASE
+			System.out.println("Opened database successfully!");
+		}
+		catch (Exception e)
+		{
+			System.err.println(e.getClass().getName() + ": " + e.getMessage());
+			System.exit(0);
+		}
+		if(connection == null)
+		{
+			System.out.println("Error: connection is null!");
+		}
+		return connection;
+	}
 }
