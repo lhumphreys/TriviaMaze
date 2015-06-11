@@ -3,6 +3,10 @@ package maze;
 import java.io.Serializable;
 
 public class Block implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int[] walls;
 	private boolean isCut;
 
@@ -96,8 +100,8 @@ public class Block implements Serializable{
 		
 		for(int i = 1; i < 5; i++)
 		{
-			room[0][i] = "––";
-			room[5][i] = "––";
+			room[0][i] = "--";
+			room[5][i] = "--";
 			room[i][0] = " |";
 			room[i][5] = "| ";
 		}

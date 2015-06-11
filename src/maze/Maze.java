@@ -4,6 +4,10 @@ import java.io.Serializable;
 import java.security.InvalidParameterException;
 
 public class Maze implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
 	private Block[][] blocks;
 	private int[] end;
 	private int[] start;

@@ -24,6 +24,10 @@ public class GameLoop {
 			Maze maze;
 		
 			int choice = mainMenu(kb);
+			while(choice == -1)
+			{
+				choice = mainMenu(kb);
+			}
 			
 			switch(choice)
 			{
@@ -284,11 +288,13 @@ public class GameLoop {
 		if(choice != 1 && choice != 2 && choice != 3 && choice != 0)
 		{
 			System.out.println("Invalid menu choice.");
+			choice = -1;
 			System.out.println();
 		}
 		}
 		catch(InputMismatchException e)
 		{
+			kb.nextLine();
 			System.out.println("You must enter an integer.");
 			System.out.println();
 		}
@@ -323,6 +329,7 @@ public class GameLoop {
 			catch(InputMismatchException e)
 			{
 				System.out.println("You must enter an integer.");
+				kb.nextLine();
 				System.out.println();
 			}
 			
