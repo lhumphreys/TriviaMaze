@@ -1,8 +1,19 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Augusto Melo
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * Block represents one room of the maze.
+ * 
+ */
+
 package maze;
 
 import java.io.Serializable;
 
-public class Block implements Serializable{
+public class Block implements Serializable
+{
 	/**
 	 * 
 	 */
@@ -11,72 +22,88 @@ public class Block implements Serializable{
 	private boolean isCut;
 
 	// Cannot be instantiated used outside its package
-	protected Block() {
+	protected Block() 
+	{
 		this.isCut = false;
 		this.walls = new int[] { 1, 1, 1, 1 };
 	}
 
 	// The methods Block* are meant to provide a easy way to block open walls
-	public void blockUp() {
+	public void blockUp() 
+	{
 		walls[0] = 1;
 	}
 
-	public void blockDown() {
+	public void blockDown() 
+	{
 		walls[1] = 1;
 	}
 
-	public void blockLeft() {
+	public void blockLeft() 
+	{
 		walls[2] = 1;
 	}
 
-	public void blockRight() {
+	public void blockRight() 
+	{
 		walls[3] = 1;
 	}
 
 	// The methods isBlocked* are meant to provide a easy way to check whether a
 	// path is blocked
-	public boolean isBlockedUp() {
+	public boolean isBlockedUp() 
+	{
 		return walls[0] == 1;
 	}
 
-	public boolean isBlockedDown() {
+	public boolean isBlockedDown() 
+	{
 		return walls[1] == 1;
 	}
 
-	public boolean isBlockedLeft() {
+	public boolean isBlockedLeft() 
+	{
 		return walls[2] == 1;
 	}
 
-	public boolean isBlockedRight() {
+	public boolean isBlockedRight() 
+	{
 		return walls[3] == 1;
 	}
 
-	public void cutRight() {
+	public void cutRight() 
+	{
 		walls[3] = 0;
 	}
 
-	public void cutLeft() {
+	public void cutLeft() 
+	{
 		walls[2] = 0;
 	}
 
-	public void cutUp() {
+	public void cutUp() 
+	{
 		walls[0] = 0;
 	}
 
-	public void cutDown() {
+	public void cutDown() 
+	{
 		walls[1] = 0;
 	}
 
-	public boolean isCut() {
+	public boolean isCut() 
+	{
 		return isCut;
 	}
 
-	public void setCut(boolean isCut) {
+	public void setCut(boolean isCut) 
+	{
 		this.isCut = isCut;
 	}
 
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		String block = "";
 
 		block += walls[0];

@@ -1,3 +1,14 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Augusto Melo
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * This class serializes and deserializes the maze
+ * for the save game functionality.
+ * 
+ */
+
 package core;
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,35 +22,45 @@ import maze.Maze;
 
 
 
-public class GameSerializator {
+public class GameSerializator 
+{
 	private static GameSerializator INSTANCE;
 	private static final String SAVED_FOLDER_NAME = "saved";
 	private static final String SAVED_GAME_EXTENTION = ".tv";
 
-	public static GameSerializator getInstance() {
-		if (INSTANCE == null) {
+	public static GameSerializator getInstance() 
+	{
+		if (INSTANCE == null) 
+		{
 			INSTANCE = new GameSerializator();
 		}
 		File file = new File(SAVED_FOLDER_NAME);
-		if (!file.exists()) {
+		if (!file.exists()) 
+		{
 			file.mkdir();
-		} else {
-			if (!file.isDirectory()) {
+		} 
+		else 
+		{
+			if (!file.isDirectory()) 
+			{
 				file.mkdir();
 			}
 		}
 		return INSTANCE;
 	}
 
-	private GameSerializator() {
+	private GameSerializator() 
+	{
 		// Singleton
 	}
 
 	// The savedGameName parameter cannot include the file extension
 	public Maze loadMaze(String savedGameName) throws IOException,
-			ClassNotFoundException {
+			ClassNotFoundException 
+	{
 
-		if (!savedGameExists(savedGameName)) {
+		if (!savedGameExists(savedGameName)) 
+		{
 			throw new FileNotFoundException("Saved game does not exist");
 		}
 		File file = new File(SAVED_FOLDER_NAME + "/" + savedGameName
@@ -56,11 +77,13 @@ public class GameSerializator {
 	}
 
 	// The gameName parameter cannot include the file extension
-	public void saveMaze(Maze maze, String gameName) throws IOException {
+	public void saveMaze(Maze maze, String gameName) throws IOException 
+	{
 		File file = new File(SAVED_FOLDER_NAME + "/" + gameName
 				+ SAVED_GAME_EXTENTION);
 
-		if (!savedGameExists(gameName)) {
+		if (!savedGameExists(gameName)) 
+		{
 			file.createNewFile();
 		}
 
@@ -73,10 +96,12 @@ public class GameSerializator {
 	}
 
 	// The gameName parameter cannot include the file extension
-	public boolean savedGameExists(String gameName) {
+	public boolean savedGameExists(String gameName) 
+	{
 		File file = new File(SAVED_FOLDER_NAME + "/" + gameName
 				+ SAVED_GAME_EXTENTION);
-		if (!file.exists()) {
+		if (!file.exists()) 
+		{
 			return false;
 		}
 
@@ -85,7 +110,8 @@ public class GameSerializator {
 
 	// Simply return a list of saved game names (including file extension) to be
 	// displayed in the load game process
-	public String[] getSavedMazesNames() {
+	public String[] getSavedMazesNames() 
+	{
 		File file = new File(SAVED_FOLDER_NAME);
 		return file.list();
 	}

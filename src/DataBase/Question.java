@@ -1,3 +1,14 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Amber Wise
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * Represents a single question in the database.  Stores info
+ * about the type of question and the correct answer.
+ * 
+ */
+
 package database;
 import java.util.ArrayList;
 
