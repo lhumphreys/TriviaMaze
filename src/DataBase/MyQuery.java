@@ -1,3 +1,13 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Amber Wise
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * This class generates queries for both the main program
+ * and the database admin tool.
+ * 
+ */
 package database;
 import java.sql.*;
 import java.util.Random;
@@ -16,7 +26,6 @@ public class MyQuery
 		conn = c;
 		stmnt = conn.createStatement();
 	}
-	
 	
 	//Prints the entire 'questions' table in the database, including column headers
 	public void printAllQuestions()throws SQLException
@@ -110,7 +119,6 @@ public class MyQuery
 		}
 		
 		return newQuestion;
-		
 	}
 	
 	//Asks the user if they wish to add a new question, and upon affirmative asks the user for question
@@ -310,7 +318,4 @@ public class MyQuery
 		query = "INSERT INTO answers(QuestionNum,AnswerNum,Correct,Answer) VALUES("+MAX+","+maxANum+",1,'"+ans+"');";
 		stmnt.executeUpdate(query);
 	}
-	
-	
-	
 }

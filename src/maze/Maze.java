@@ -1,9 +1,26 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Augusto Melo
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * The maze which the player must travel through.  Also
+ * stores the player's current position in the maze.
+ * This is the piece which must be saved to reload the game.
+ * 
+ */
+
 package maze;
 
 import java.io.Serializable;
 import java.security.InvalidParameterException;
 
-public class Maze implements Serializable {
+public class Maze implements Serializable 
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
 	private Block[][] blocks;
 	private int[] end;
 	private int[] start;
@@ -16,7 +33,8 @@ public class Maze implements Serializable {
 		this.mazeSize = blocks.length;
 		checkBounds(start);
 		checkBounds(end);
-		if (start[0] == end[0] && start[1] == end[1]) {
+		if (start[0] == end[0] && start[1] == end[1]) 
+		{
 			throw new InvalidParameterException(
 					"Start point is the same as the end poit");
 		}
@@ -27,28 +45,34 @@ public class Maze implements Serializable {
 
 	// Returns true if the player has reached the exit
 	// ONLY HORIZONTAL AND VERTICAL COORDINATES!
-	public boolean move(int[] coordinates) {
+	public boolean move(int[] coordinates) 
+	{
 		checkBounds(playerPosition);
 		this.playerPosition = coordinates;
-		if (coordinates[0] == end[0] && coordinates[1] == end[1]) {
+		if (coordinates[0] == end[0] && coordinates[1] == end[1]) 
+		{
 			return true;
 		}
 		return false;
 	}
 
-	public int[] getStart() {
+	public int[] getStart() 
+	{
 		return start;
 	}
 
-	public int[] getEnd() {
+	public int[] getEnd() 
+	{
 		return end;
 	}
 
-	public Block[][] getBlocks() {
+	public Block[][] getBlocks() 
+	{
 		return blocks;
 	}
 
-	public int[] getPlayerPosition() {
+	public int[] getPlayerPosition() 
+	{
 		return playerPosition;
 	}
 	
@@ -71,16 +95,20 @@ public class Maze implements Serializable {
 	{
 		this.playerPosition[1] ++;
 	}
+	
 	public Block getCurrentBlock()
 	{
 		return this.blocks[this.playerPosition[0]][this.playerPosition[1]];
 	}
 
 	// This method is for test purposes. Not used in the actual game
-	public void printMazeBlocksContraints() {
-		for (int i = 0; i < blocks.length; i++) {
+	public void printMazeBlocksContraints() 
+	{
+		for (int i = 0; i < blocks.length; i++) 
+		{
 			String line = "";
-			for (int j = 0; j < blocks.length; j++) {
+			for (int j = 0; j < blocks.length; j++) 
+			{
 				line += blocks[i][j] + " ";
 			}
 			System.out.println(line);
@@ -88,10 +116,12 @@ public class Maze implements Serializable {
 	}
 
 	// Method to to help checking maze's bounds
-	private void checkBounds(int[] coordinates) {
+	private void checkBounds(int[] coordinates) 
+	{
 		int x = coordinates[0];
 		int y = coordinates[1];
-		if ((x >= mazeSize || x < 0) || (y >= mazeSize || y < 0)) {
+		if ((x >= mazeSize || x < 0) || (y >= mazeSize || y < 0)) 
+		{
 			throw new IndexOutOfBoundsException(
 					"Provided corrdinates out of maze's bounds");
 		}

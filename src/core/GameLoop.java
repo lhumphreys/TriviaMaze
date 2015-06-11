@@ -1,3 +1,14 @@
+/*
+ * Team Name: The Illuminati
+ * Author: Laura Humphreys
+ * Date Modified: 6/10/2015
+ * CSCD 350
+ * 
+ * This is the main class that executes the code.
+ * It integrates the various classes and executes them
+ * in the game loop.
+ * 
+ */
 package core;
 
 import java.util.*;
@@ -10,9 +21,11 @@ import maze.MazeGen;
 import database.MyQuery;
 import database.Question;
 
-public class GameLoop {
+public class GameLoop 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner kb = new Scanner(System.in);
 		
 		System.out.println("Welcome to the Trivia Maze Game!");
@@ -24,6 +37,10 @@ public class GameLoop {
 			Maze maze;
 		
 			int choice = mainMenu(kb);
+			while(choice == -1)
+			{
+				choice = mainMenu(kb);
+			}
 			
 			switch(choice)
 			{
@@ -57,18 +74,22 @@ public class GameLoop {
 	static Maze loadGame(Scanner kb)
 	{
 		System.out.println("Please enter the name of your game save: ");
-		System.out.println("(For testing, try 'Laura')");
 		
 		String gameName = kb.nextLine();
 		GameSerializator gs = GameSerializator.getInstance();
 		
 		Maze maze = null;
-		try {
+		try 
+		{
 			maze = gs.loadMaze(gameName);
-		} catch (ClassNotFoundException e) {
+		} 
+		catch (ClassNotFoundException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) 
+		{
 			System.out.println("That save game was not found.");
 		}
 		return maze;
@@ -79,9 +100,12 @@ public class GameLoop {
 		boolean correct;
 		Question question = null;
 		
-		try {
+		try 
+		{
 			question = myQuery.getQuestion();
-		} catch (SQLException e) {
+		} 
+		catch (SQLException e) 
+		{
 			// Auto-generated catch block
 			e.printStackTrace();
 			System.exit(0);
@@ -117,7 +141,6 @@ public class GameLoop {
 			switch(choice)
 			{
 			case 1:
-				
 				if(pos.isBlockedUp())
 				{
 					System.out.println("You can't go that way!");
@@ -139,8 +162,8 @@ public class GameLoop {
 					}
 				}
 				break;
-			case 2:
 				
+			case 2:
 				if(pos.isBlockedDown())
 				{
 					System.out.println("You can't go that way!");
@@ -161,6 +184,7 @@ public class GameLoop {
 					}
 				}
 				break;
+				
 			case 3:
 				if(pos.isBlockedRight())
 				{
@@ -184,7 +208,6 @@ public class GameLoop {
 				break;
 				
 			case 4:
-				
 				if(pos.isBlockedLeft())
 				{
 					System.out.println("You can't go that way!");
@@ -284,11 +307,13 @@ public class GameLoop {
 		if(choice != 1 && choice != 2 && choice != 3 && choice != 0)
 		{
 			System.out.println("Invalid menu choice.");
+			choice = -1;
 			System.out.println();
 		}
 		}
 		catch(InputMismatchException e)
 		{
+			kb.nextLine();
 			System.out.println("You must enter an integer.");
 			System.out.println();
 		}
@@ -309,7 +334,6 @@ public class GameLoop {
 		System.out.println("[0] Quit");
 		System.out.println("Choice: ");
 		
-		
 		try{
 			choice = kb.nextInt();
 			kb.nextLine();
@@ -323,9 +347,9 @@ public class GameLoop {
 			catch(InputMismatchException e)
 			{
 				System.out.println("You must enter an integer.");
+				kb.nextLine();
 				System.out.println();
 			}
-			
 		
 		return choice;
 	}
@@ -390,7 +414,9 @@ public class GameLoop {
 					myQuery.printAllAnswers();
 					break;
 				}
-			} catch (SQLException e) {
+			}
+			catch (SQLException e) 
+			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -407,7 +433,8 @@ public class GameLoop {
 		System.out.println("[0] Cancel");
 		System.out.println("Choice: ");
 		
-		try{
+		try
+		{
 			choice = kb.nextInt();
 			kb.nextLine();
 			
